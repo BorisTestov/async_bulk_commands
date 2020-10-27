@@ -1,8 +1,7 @@
-#include "test_version.h"
+#include <gtest/gtest.h>
 
 int main(int argc, char* argv[])
 {
-    int status = 0;
-    status |= QTest::qExec(new TestVersion(), argc, argv);
-    return status;
+    ::testing::InitGoogleTest(&argc, argv);
+    return RUN_ALL_TESTS();
 }
